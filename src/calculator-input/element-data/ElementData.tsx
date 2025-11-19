@@ -18,7 +18,6 @@ export const ElementData = ({ elements, onSetElements }: ElementDataProps) => {
 
   const handleAddElement = () => {
     onSetElements([...elements, { weight: 0, calories: 0 }]);
-    console.log("Element added", elements);
   };
 
   return (
