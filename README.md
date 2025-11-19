@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+**Opa Challenge**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto front-end creado con React, Vite y TypeScript como parte del reto "OPA Challenge".
 
-Currently, two official plugins are available:
+**Descripción**:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Qué es**: Aplicación web modular para ingresar datos, realizar cálculos y guardar/mostrar resultados. Contiene componentes organizados por funcionalidad (`calculator-input`, `calculate-data`, `element-data`, `main-data`).
+- **Objetivo**: Proporcionar una interfaz clara para introducir elementos y parámetros, ejecutar cálculos y persistir resultados localmente.
 
-## React Compiler
+**Stack Tecnológico**:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React + TypeScript
+- **Bundler/Dev**: Vite
+- **Estilos**: Tailwind CSS
 
-## Expanding the ESLint configuration
+**Estructura principal del proyecto**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `src/` : Código fuente React
+  - `OpaApp.tsx`, `main.tsx` : punto de entrada y componente raíz
+  - `calculator-input/` : entrada y lógica de cálculo
+  - `calculate-data/` : componentes relacionados con el procesamiento y la respuesta
+  - `element-data/` : formularios y manejo de elementos
+  - `main-data/` : inputs generales (peso, calorías, bienvenida)
+  - `shared/` : interfaces y tipos compartidos
+- `public/` : activos públicos (fuentes, imágenes, etc.)
+- `vite.config.ts`, `tsconfig.json` : configuración del proyecto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Instalación**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clona el repositorio:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+git clone https://github.com/Davidfelipe91/opa-challenge.git
+cd opa-challenge
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+**Scripts disponibles**
+
+- `npm run dev` : inicia el servidor de desarrollo (Vite).
+- `npm run build` : compila TypeScript y genera la build de producción.
+- `npm run preview` : sirve la build de producción para una vista previa.
+- `npm run lint` : ejecuta ESLint sobre el proyecto.
+
+Ejemplo rápido para desarrollo:
+
+```bash
+npm install
+npm run dev
+```
+
+Abre `http://localhost:5173` (o la URL que Vite muestre) en tu navegador.
+
+**Notas de desarrollo**
+
+- El proyecto usa TypeScript; si agregas nuevas rutas o props, añade/actualiza las interfaces en `src/shared/`.
+- Componentes principales están organizados por carpetas; busca `components/` dentro de cada módulo funcional.
+
+**Contribuciones**
+
+- Si quieres mejorar la app, crea un fork y un PR con cambios claros y tests si aplica. Describe el objetivo en el PR.
+
+**Licencia**
+
+- Repositorio sin licencia especificada. Añade un archivo `LICENSE` si quieres aplicar una licencia permisiva.
+
+**Contacto**
+
+- Autor/Propietario: `Davidfelipe91` (repo: `opa-challenge`).
+
+Si quieres, puedo:
+
+- Añadir secciones específicas (ej. despliegue, tests, convenciones de commit).
+- Preparar un `LICENSE` y un `CHANGELOG` inicial.
