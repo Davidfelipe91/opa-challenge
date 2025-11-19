@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url("fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url("fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-poppins-semibold: "Poppins SemiBold", "sans-serif";
+  --font-poppins-bold: "Poppins Bold", "sans-serif";
+  --font-poppins-medium: "Poppins Medium", "sans-serif";
+  --font-poppins-regular: "Poppins Regular", "sans-serif";
+  --font-poppins-light: "Poppins Light", "sans-serif";
+
+  --color-blue-primary: #0366b1;
+  --color-blue-secondary: #0d2b6b;
+  --color-orange-primary: #ffab00;
+  --color-orange-secondary: #ff7900;
+  --color-gray-primary: #ededed;
+  --color-gray-secondary: #757575;
+  --color-white-primary: #ffffff;
+  --color-dark-primary: #000000;
+}
